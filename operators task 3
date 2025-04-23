@@ -1,0 +1,18 @@
+# part 3 - Access Eligibility Checker
+
+age = input("What is your age? ")
+ticket = input("Do you have a ticket? (y/n): ")
+vip_code = input("Do you have VIP code? ")
+if not age.isdigit():
+    print("Invalid age")
+    exit()
+age = int(age)
+if age < 0:
+    print("Invalid age")
+    exit()
+if (age >= 18 and ticket == "y") or vip_code == "GOLDVIP":
+    eligible = True
+else:
+    eligible = False
+
+print(f"Access granted: {eligible}")
