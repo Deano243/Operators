@@ -1,0 +1,12 @@
+username = input("Enter your username: ")
+password = input("Enter your password: ")
+email = input("Enter your email: ")
+
+if (
+    username.strip() != "" and
+    len(password) >= 8 and any(char.isdigit() for char in password) and
+    email.count("@") == 1 and email.endswith(".com")
+):
+    print("Form valid")
+else:
+    print("Form invalid")
